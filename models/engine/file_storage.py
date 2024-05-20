@@ -24,7 +24,7 @@ class FileStorage:
         dict_obj = {}
 
         for key, value in self.__objects.items():
-            dict_obj[key] = value.to_dict
+            dict_obj[key] = value.to_dict()
             with open("file.json", "w", encoding="utf-8") as jsonFile:
                 json.dump(dict_obj, jsonFile)
 
