@@ -45,7 +45,6 @@ class BaseModel:
         self.updated_at = datetime.now()
         storage.save()
 
-
     def to_dict(self):
         dict_objct = self.__dict__.copy()
         dict_objct['__class__'] = self.__class__.__name__
