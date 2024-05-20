@@ -31,12 +31,18 @@ class BaseModel:
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
 
+            storage.new(self)
+
     def __str__(self):
         class_name = self.__class__.__name__
         return "[{}] ({}) {}".format(class_name, self.id, self.__dict__)
 
     def save(self):
+        from models import storage
+
         self.updated_at = datetime.now()
+        storage.save()
+
 
     def to_dict(self):
         dict_objct = self.__dict__.copy()
