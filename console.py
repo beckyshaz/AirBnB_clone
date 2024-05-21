@@ -9,16 +9,13 @@ class HBNBCommand(cmd.Cmd):
     """defining HBNBCommand class"""
     prompt = '(hbnb) '
 
-    def do_EOF(self , args):
+    def do_EOF(self, args):
         """Exits the program when ctr+D is entered"""
         return True
 
-    #def do_greet(self, args):
-    #    print("hello")
-
     def do_quit(self, args):
         """Quits the program when quit is used as the command"""
-        return  True
+        return True
 
     def emptyline(self):
         """This is called when an empty line is
